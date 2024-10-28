@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="home pb-5">
+            <div class="container pt-5">
+                <div class="caption text-center bg-danger d-flex justify-content-between py-3 px-2">
+                    <h2 class="text-white">Display Users : 😊</h2>
+                    <input type="text" class="form-control w-50" placeholder="serach on data by name or location or gender...." id="search" onkeyup="search()">
+                    <button class="btn btn-success text-white" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2">Add Student</button>
+                    <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">checkBox</button>
+                </div>
+                <div class="table">
+                 
+                    <table class="table-dark table table-striped ">
+                      
+                           <tr >
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Telephone</th>
+                            <th>Age</th>
+                            <th>Location</th>
+                            <th>Gender</th>
+                            <th>Image</th>
+                            <th>Details</th>
+                           </tr>
+                        <tbody id="table-body">
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Details of Student</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modelBody">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Student</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modelBody2">
+
+          <form action="#">
+            <input class="form-control" id="id" type="number" placeholder="enter student id..">
+            <input class="form-control my-3" id="name" type="text" placeholder="enter student name..">
+            <input class="form-control" id="age" type="number" placeholder="enter student age..">
+            <input class="form-control my-3" id="gender" type="text" placeholder="enter student gender..">
+            <input class="form-control" id="location" type="text" placeholder="enter student location..">
+            <input class="form-control my-3" id="address" type="text" placeholder="enter student address..">
+            <input class="form-control " id="telephone" type="text" placeholder="enter student telephone..">
+            <input class="form-control " id="img" type="file" placeholder="select your image">
+            <button class="btn btn-success my-3 w-100" onclick="addUser()">Add</button>
+          </form>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
+       
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Check the location</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" id="offcanvas-body">
+                <form action="#">
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1"> cairo</label><br>
+                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                    <label for="vehicle2">giza</label><br>
+                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                    <label for="vehicle3">helwan</label><br><br>
+                    <input type="submit" value="Submit">
+                  </form>
+            </div>
+
+
+
+
+            
+            </div>
+                    
+
+
+
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
